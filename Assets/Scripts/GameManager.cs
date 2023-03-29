@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
 
     public void CashOutBitcoin()
     {
-        // check if the number of bitcoin if bigger the 0 to open panel withdraw or panel warring   
-        if( count <= 0 )
+        // Check if the number of Bitcoin is greater than 0 to open the withdraw panel or the warning panel.
+        if ( count <= 0 )
         {
             Warning_Panel.SetActive(true);
         }
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         {
             CashOut_Panel.SetActive(true);
             GetBitcoinAmount();
-           // ConvertAmount();
+
             FillSlider();
         }
     }
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         BitcoinAmount.text = count.ToString();
     }
 
-    // Clear bitcoins amount  and slider after withraw succefully
+    // Clear bitcoins amount  and slider value after withraw succefully
     public void ClearAmount()
     {
         count = 0;
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         Slider.value = 0;
         BitcoinConvertAmount.text = "0.000003";
     }
-    //Cover bitcoint amount to Slider
+    //convert bitcoint amount to Slider
     public void FillSlider()
     {
         Slider.value = count;
