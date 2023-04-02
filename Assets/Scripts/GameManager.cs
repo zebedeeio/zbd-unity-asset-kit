@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+
+
+
+
+    [Header("Theme One")]
     // Reference to the Text component that displays the bitcoins numbers
-    public Text BitoinsCount;
-    // The current count
-    private int count = 0;
+    public Text BitoinsCount_V1;
+    // Reference to the Text component that displays the bitcoins numbers of V2
+    public Text BitoinsCount_V2;
     // Reference to the pabel warning 
     public GameObject Warning_Panel;
     // Reference to the CashOut panel
@@ -19,23 +25,58 @@ public class GameManager : MonoBehaviour
     public Slider Slider;
     // Reference to the Slider Amount
     public Text SlideAmount;
+    // Reference to the Animator component 
+    public Animator animator;
 
-    public Text BitcoinConvertAmount;
 
-    // one satoshi is 0.00000001 BTC
-   public float satoshi = 0.00000001f;
-    public void CollectBitcoins()
+    [Header("Images to change Color")]
+    // Reference to all images to change their color
+    public Image[] ColorofImagesToChange;
+
+
+
+    // Color to change
+    private Color SelectedColor;
+    // Controle Arrow Animation
+    private bool isAnimationPlaying = false;
+    // The current count
+    private int count = 0;
+
+
+    public void CollectBitcoins_V1()
     {
         // Increase the score by 10
-        count = count + 10 ;
+        count = count + 10;
         // Update the score text
-        BitoinsCount.text = count.ToString();
+        BitoinsCount_V1.text = count.ToString();
     }
 
+    public void CollectBitcoins_V2()
+    {
+        //start arrow animation
+        StartCoroutine(UpdateTextAfterAnimation());
+        isAnimationPlaying = true;
+    }
+    IEnumerator UpdateTextAfterAnimation()
+    {
+        animator.SetTrigger("PlayAnimation"); // replace "PlayAnimation" with the name of your animation trigger
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        // Increase the score by 10
+        count = count + 10;
+        // Update the score text
+        BitoinsCount_V2.text = count.ToString() + " sats";
+        //set animation controller to false
+        isAnimationPlaying = false;
+    }
+    public void CollectBitcoins_V3()
+    {
+        // Increase the score by 10
+        count = count + 10;
+    }
     public void CashOutBitcoin()
     {
         // Check if the number of Bitcoin is greater than 0 to open the withdraw panel or the warning panel.
-        if ( count <= 0 )
+        if (count <= 0)
         {
             Warning_Panel.SetActive(true);
         }
@@ -58,28 +99,44 @@ public class GameManager : MonoBehaviour
     public void ClearAmount()
     {
         count = 0;
-        BitoinsCount.text = "0";
+        BitoinsCount_V1.text = "0";
+        BitoinsCount_V2.text = "0 sats";
         Slider.value = 0;
-        BitcoinConvertAmount.text = "0.000003";
     }
     //convert bitcoint amount to Slider
     public void FillSlider()
     {
         Slider.value = count;
-        SlideAmount.text = count.ToString() +  " / 200  withraw"; 
-    }
-    // Convert Amount
-    public void ConvertAmount()
-    {
-    
-        float one_usd = count / satoshi;
-        BitcoinConvertAmount.text = one_usd.ToString(); 
-
+        SlideAmount.text = count.ToString() + " / 200  withraw";
     }
     //Open the link for download the zebedee wallet
     public void GetZebedeeWallet()
     {
-        
+
         Application.OpenURL("https://zebedee.io/app?partner=ZBD&game=Sarutobi&game_name=Sarutobi");
     }
+    public void ChangeColor(Image colorselected)
+    {
+        
+        SelectedColor = colorselected.color;
+        ApplyColorToOtherImages(colorselected);
+    }
+
+    void ApplyColorToOtherImages(Image selectedColor)
+    {
+        
+       
+        foreach (Image image in ColorofImagesToChange)
+        {
+            if (image != selectedColor)
+            {
+                image.color = SelectedColor;
+            }
+        }
+    }
+
+
+
+
+
 }
