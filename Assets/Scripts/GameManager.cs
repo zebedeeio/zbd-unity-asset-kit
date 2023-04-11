@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,7 +37,10 @@ public class GameManager : MonoBehaviour
     public GameObject SuccessPanel;
     // Reference to the GamerTag component 
     public GameObject WithdrawPanel;
-
+    // Reference to convertedsats
+    public Text satsamounts;
+    // Reference to cashout buttons
+    public Button[] CashOutButtons;
 
 
     [Header("Images to change Color")]
@@ -56,17 +59,34 @@ public class GameManager : MonoBehaviour
 
     public void CollectBitcoins_V1()
     {
-        // Increase the score by 10
-        count = count + 10;
-        // Update the score text
-        BitoinsCount_V1.text = count.ToString();
+        if( count < 200 )
+        {
+            // Increase the score by 10
+            count = count + 10;
+            // Update the score text
+            BitoinsCount_V1.text = count.ToString();
+        }
+        else
+        {
+            CashOutButtons[0].interactable = false;
+        }
+
     }
 
     public void CollectBitcoins_V2()
     {
-        //start arrow animation
-        StartCoroutine(UpdateTextAfterAnimation());
-        isAnimationPlaying = true;
+        if( count < 200)
+        {
+            //start arrow animation
+            StartCoroutine(UpdateTextAfterAnimation());
+            isAnimationPlaying = true;
+        }
+        else
+        {
+            CashOutButtons[1].interactable = false;
+
+        }
+
     }
     IEnumerator UpdateTextAfterAnimation()
     {
@@ -82,9 +102,18 @@ public class GameManager : MonoBehaviour
     }
     public void CollectBitcoins_V3()
     {
-        // Increase the score by 10
-        count = count + 10;
-        BitoinsCount_V3.text = count.ToString() + " sats";
+        if( count <  200 )
+        {
+            // Increase the score by 10
+            count = count + 10;
+            BitoinsCount_V3.text = count.ToString() + " sats";
+        }
+        else
+        {
+            CashOutButtons[2].interactable = false;
+
+        }
+
     }
     public void CashOutBitcoin()
     {
@@ -97,8 +126,8 @@ public class GameManager : MonoBehaviour
         {
             CashOut_Panel.SetActive(true);
             GetBitcoinAmount();
-
             FillSlider();
+            calculatestatsamount();
         }
     }
     // get bitcoin amount to withdraw
@@ -117,12 +146,16 @@ public class GameManager : MonoBehaviour
         BitoinsCount_V3.text = "0 sats";
         Slider.value = 0;
         GamerTag.text = "";
+        foreach (Button btn in CashOutButtons)
+        {
+            btn.interactable = true;
+        }
     }
     //convert bitcoint amount to Slider
     public void FillSlider()
     {
         Slider.value = count;
-        SlideAmount.text = count.ToString() + " / 200  withraw";
+        SlideAmount.text = count.ToString() + " / 200  withdrawn";
     }
     //Open the link for download the zebedee wallet
     public void GetZebedeeWallet()
@@ -166,5 +199,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void calculatestatsamount()
+    {
 
+
+        int bitcoinamount;
+        int.TryParse(BitcoinAmount.text, out bitcoinamount);
+        float statsamount = bitcoinamount / 10000000f;
+        string resultString = statsamount.ToString("F6");
+        satsamounts.text = "₿" + resultString;
+
+
+
+    }
 }
