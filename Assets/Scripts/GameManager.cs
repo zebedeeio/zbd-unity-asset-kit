@@ -70,30 +70,36 @@ public class GameManager : MonoBehaviour
     private bool isAnimationPlaying = false;
     // The total stats amount
     private int Totalsatsamount = 0;
+
+    private const int BITCOIN_LIMIT = 200;
+    private const int BITCOIN_EARN_AMOUNT = 10;
     #endregion
     public void CollectBitcoins_V1()
     {
-        if( BitcoinEarnedAmount < 200)
+       
+
+        if (BitcoinEarnedAmount >= BITCOIN_LIMIT)
         {
-            // Increase the score by 10
-            BitcoinEarnedAmount = BitcoinEarnedAmount + 10;
-            // Update the score text
-            BitoinsCount_V1.text = BitcoinEarnedAmount.ToString();
-        }
-        else
-        {
-            // make all button non interactable
-            foreach (Button btn in CashOutButtons)
+            // Make all buttons non-interactable
+            foreach (Button button in CashOutButtons)
             {
-                btn.interactable = false;
+                button.interactable = false;
             }
+
+            return;
         }
+
+        // Increase the score by 10
+        BitcoinEarnedAmount += BITCOIN_EARN_AMOUNT;
+
+        // Update the score text
+        BitoinsCount_V1.text = BitcoinEarnedAmount.ToString();
 
     }
 
     public void CollectBitcoins_V2()
     {
-       if( BitcoinEarnedAmount < 200)
+       if( BitcoinEarnedAmount < BITCOIN_LIMIT)
        {
             //start arrow animation
             StartCoroutine(UpdateTextAfterAnimation());
@@ -115,7 +121,7 @@ public class GameManager : MonoBehaviour
     {
         animator.SetTrigger("PlayAnimation"); // replace "PlayAnimation" with the name of your animation trigger
                                              
-        BitcoinEarnedAmount = BitcoinEarnedAmount + 10; // Increase the score by 10
+        BitcoinEarnedAmount = BitcoinEarnedAmount + BITCOIN_EARN_AMOUNT; // Increase the score by 10
         // Update the score text
         BitoinsCount_V2.text = BitcoinEarnedAmount.ToString() + " sats";
         //set animation controller to false
@@ -125,77 +131,76 @@ public class GameManager : MonoBehaviour
     }
     public void CollectBitcoins_V3()
     {
-        if (BitcoinEarnedAmount < 200)
+       
+
+        if (BitcoinEarnedAmount >= BITCOIN_LIMIT)
         {
-            // Increase the score by 10
-            BitcoinEarnedAmount = BitcoinEarnedAmount + 10;
-            BitoinsCount_V3.text = BitcoinEarnedAmount.ToString() + " sats";
-        }
-        else
-        {
-            // Increase the score by 10
-            foreach (Button btn in CashOutButtons)
+            // Make all buttons non-interactable
+            foreach (Button button in CashOutButtons)
             {
-                btn.interactable = false;
+                button.interactable = false;
             }
+
+            return;
         }
 
+        // Increase the score by 10
+        BitcoinEarnedAmount += BITCOIN_EARN_AMOUNT;
 
+        // Update the score text
+        BitoinsCount_V3.text = BitcoinEarnedAmount.ToString() + " sats";
     }
     public void CashOutBitcoin()
     {
        
-        // Check if the number of Bitcoin is greater than 0 to open the withdraw panel if not open the warning panel.
-        if (BitcoinEarnedAmount <= 0)
-        {
-            Warning_Panel.SetActive(true);
-        }
-        else
-        {
-            if(Totalsatsamount >= 200 )
+           // Check if the number of Bitcoin is greater than 0 to open the withdraw panel if not open the warning panel.
+            if (BitcoinEarnedAmount <= 0)
+            {
+               Warning_Panel.SetActive(true);
+               return;
+            }
+       
+            if(Totalsatsamount >= BITCOIN_LIMIT)
             {
                 gamtertaginputfield_limit.text = GamerTagInputField.text;
                 CashOut_Limtit_Reached_Panel.SetActive(true);
                 bitcointext_limit.text = BitcoinEarnedAmount.ToString();
-                float statsamount = BitcoinEarnedAmount / 10000000f;
-                string resultString = statsamount.ToString("F6");
-                satsamountconvertedlimit.text = "₿" + resultString;
-
+                satsamountconvertedlimit.text = ConvertBitcoinToStats(BitcoinEarnedAmount);
+                return;
 
             }
-            else
-            {
+           
                 
               
                 GetBitcoinAmount();
                 FillSlider();
                 calculatestatsamount();
                 CashOut_Panel.SetActive(true);
-            }
+            
            
-        }
+       
     }
+  
     // get bitcoin amount to withdraw and check if it reached the limit of 200 or no
     public void GetBitcoinAmount()
     {
-        if (BitcoinEarnedAmount + Totalsatsamount > 200)
+        if (BitcoinEarnedAmount + Totalsatsamount > BITCOIN_LIMIT)
         {
-             int rest = 200 - Totalsatsamount;
-             BitcoinEarnedAmount = BitcoinEarnedAmount - rest;
+             int rest = BITCOIN_LIMIT - Totalsatsamount;
+             BitcoinEarnedAmount -= rest;
            
-            Totalsatsamount = Totalsatsamount + rest;
+            Totalsatsamount += rest;
             BitcoinAmount.text = Totalsatsamount.ToString();
             BitoinsCount_V1.text = BitcoinEarnedAmount.ToString();
             BitoinsCount_V2.text = BitcoinEarnedAmount.ToString();
             BitoinsCount_V3.text = BitcoinEarnedAmount.ToString();
             bitcointext_limit.text = BitcoinEarnedAmount.ToString();    
-            float statsamount = BitcoinEarnedAmount / 10000000f;
-            string resultString = statsamount.ToString("F6");
-            satsamountconvertedlimit.text = "₿" + resultString;
+           
+            satsamountconvertedlimit.text = ConvertBitcoinToStats(BitcoinEarnedAmount);
         }
         else
         {
-            Totalsatsamount = Totalsatsamount + BitcoinEarnedAmount;
+            Totalsatsamount += BitcoinEarnedAmount;
             BitcoinAmount.text = Totalsatsamount.ToString();
             BitcoinEarnedAmount = 0;
             BitoinsCount_V1.text = "0";
@@ -204,6 +209,12 @@ public class GameManager : MonoBehaviour
         }
 
        
+    }
+
+    private string ConvertBitcoinToStats(float bitcoinAmount)
+    {
+        float statsAmount = bitcoinAmount / 10000000f;
+        return "₿" + statsAmount.ToString("F6");
     }
     //convert bitcoint amount to Slider
     public void FillSlider()
