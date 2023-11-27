@@ -13870,7 +13870,7 @@ GameObject:
   - component: {fileID: 1643102566}
   - component: {fileID: 1643102565}
   m_Layer: 5
-  m_Name: ZEBImage
+  m_Name: ZBDImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
