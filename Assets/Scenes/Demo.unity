@@ -403,7 +403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: 'Enter your ZEBEDEE gamertag here:'
+  m_Text: 'Enter your email:'
 --- !u!222 &27213807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,7 +614,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &81920535
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -631,7 +631,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &81920536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -669,7 +669,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 644684004}
   m_Father: {fileID: 2117904611}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -747,7 +748,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -787,7 +788,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: 'Enter your ZEBEDEE gamertag here:'
+  m_Text: 'Enter your email:'
 --- !u!222 &100324828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -832,8 +833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 191.11111, y: -50}
-  m_SizeDelta: {x: 382.22223, y: 100}
+  m_AnchoredPosition: {x: 192.66667, y: -50}
+  m_SizeDelta: {x: 385.33334, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127954391
 MonoBehaviour:
@@ -1052,7 +1053,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -40, y: 195}
-  m_SizeDelta: {x: 243.55556, y: 100}
+  m_SizeDelta: {x: 246.66667, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157966762
 MonoBehaviour:
@@ -1259,7 +1260,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1635,7 +1636,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &191626108
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1652,7 +1653,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &203413570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,13 +2248,108 @@ RectTransform:
   - {fileID: 1661466256}
   - {fileID: 190716762}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 25, y: -411.20007}
   m_SizeDelta: {x: 1299.5, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &281132238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281132239}
+  - component: {fileID: 281132242}
+  - component: {fileID: 281132241}
+  - component: {fileID: 281132240}
+  m_Layer: 5
+  m_Name: DollarText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &281132239
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281132238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1223759483}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 565.83, y: 95}
+  m_SizeDelta: {x: 233.3333, y: 65.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &281132240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281132238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
+--- !u!114 &281132241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281132238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7a559f4659642244680bd2f0743b8265, type: 3}
+    m_FontSize: 65
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 65
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: <b> $ </b> 0.04
+--- !u!222 &281132242
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281132238}
+  m_CullTransparentMesh: 1
 --- !u!1 &301759107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2504,7 @@ RectTransform:
   m_Children:
   - {fileID: 1941340388}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2656,7 +2752,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Okay
+  m_Text: Get ZBD
 --- !u!222 &358914536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3147,7 +3243,7 @@ RectTransform:
   - {fileID: 623197165}
   - {fileID: 267755543}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3216,8 +3312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 121.77778, y: -50}
-  m_SizeDelta: {x: 243.55556, y: 100}
+  m_AnchoredPosition: {x: 123.333336, y: -50}
+  m_SizeDelta: {x: 246.66667, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435435651
 MonoBehaviour:
@@ -3494,7 +3590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: "DON\u2019T HAVE ZEBEDEE? GET THE APP"
+  m_Text: "DON\u2019T HAVE ZBD YET? \r\nGET THE APP"
 --- !u!222 &466136477
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3937,7 +4033,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &511628109
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3954,7 +4050,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &511628110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4231,12 +4327,12 @@ RectTransform:
   m_Children:
   - {fileID: 705594895}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 211}
-  m_SizeDelta: {x: 243.55556, y: 100}
+  m_SizeDelta: {x: 246.66667, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548654270
 MonoBehaviour:
@@ -4589,7 +4685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: 'Enter your ZEBEDEE gamertag here:'
+  m_Text: 'Enter your email:'
 --- !u!222 &611608001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4682,13 +4778,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 620245412}
   m_TextComponent: {fileID: 2133560224}
   m_Placeholder: {fileID: 1723316286}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -5168,7 +5264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: "DON\u2019T HAVE ZEBEDEE?\n"
+  m_Text: "DON\u2019T HAVE ZBD YET? "
 --- !u!222 &623197168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5351,7 +5447,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &633472032
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5368,7 +5464,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &633472033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5406,6 +5502,86 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633472030}
+  m_CullTransparentMesh: 1
+--- !u!1 &644684003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 644684004}
+  - component: {fileID: 644684006}
+  - component: {fileID: 644684005}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &644684004
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644684003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 87620314}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.199997, y: -154}
+  m_SizeDelta: {x: 234, y: 75.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &644684005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644684003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7a559f4659642244680bd2f0743b8265, type: 3}
+    m_FontSize: 65
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 65
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: $ 0.04
+--- !u!222 &644684006
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644684003}
   m_CullTransparentMesh: 1
 --- !u!1 &663505642
 GameObject:
@@ -5611,7 +5787,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: Please specify a valid gamertag.
+  m_Text: Please enter a valid email.
 --- !u!222 &689467032
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5868,8 +6044,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 121.77778, y: -50}
-  m_SizeDelta: {x: 243.55556, y: 100}
+  m_AnchoredPosition: {x: 123.333336, y: -50}
+  m_SizeDelta: {x: 246.66667, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705594896
 MonoBehaviour:
@@ -6254,7 +6430,7 @@ RectTransform:
   - {fileID: 934780940}
   - {fileID: 1809354866}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -6304,13 +6480,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 735901028}
   m_TextComponent: {fileID: 1809354867}
   m_Placeholder: {fileID: 934780941}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -6422,12 +6598,14 @@ MonoBehaviour:
   BitcoinAmount: {fileID: 1898989565}
   Slider: {fileID: 1358557801}
   SlideAmount: {fileID: 402084925}
-  GamerTagInputField: {fileID: 735901027}
+  EmailInputField: {fileID: 735901027}
   convertedsatsamounts: {fileID: 705594897}
+  Converteddollarsamounts: {fileID: 281132241}
   animator: {fileID: 191626108}
-  gamtertaginputfield_limit: {fileID: 620245411}
+  Emailinputfield_limit: {fileID: 620245411}
   bitcointext_limit: {fileID: 1573319249}
   satsamountconvertedlimit: {fileID: 127954392}
+  bitcoinamountconvertedlimit: {fileID: 281132241}
   ColorofImagesToChange:
   - {fileID: 915136161}
   - {fileID: 1947134607}
@@ -6699,7 +6877,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &911845803
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6716,7 +6894,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &911845804
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6894,8 +7072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -624.1, y: 304.77}
-  m_SizeDelta: {x: 175, y: 175}
+  m_AnchoredPosition: {x: -624.1, y: 258.35}
+  m_SizeDelta: {x: 167, y: 167}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &915143658
 MonoBehaviour:
@@ -7006,7 +7184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gamertag
+  m_Text: example@gmail.com
 --- !u!222 &934780942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7072,7 +7250,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: -86.5
+  m_Spacing: -69.21
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -7255,7 +7433,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &946979825
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7272,7 +7450,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &946979826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8547,7 +8725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 548.15, y: -142.3325}
+  m_AnchoredPosition: {x: 548.15, y: -138.01001}
   m_SizeDelta: {x: 1096.3, y: 130.41}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1058176771
@@ -8639,7 +8817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: "DON\u2019T HAVE ZEBEDEE?\n"
+  m_Text: "DON\u2019T HAVE ZBD YET?"
 --- !u!222 &1058176773
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9657,8 +9835,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000057062, y: -423.32996}
-  m_SizeDelta: {x: 1673.2, y: 2251.1}
+  m_AnchoredPosition: {x: 0.000057062, y: -327.6}
+  m_SizeDelta: {x: 1673.2, y: 1995.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105495777
 MonoBehaviour:
@@ -9922,7 +10100,7 @@ MonoBehaviour:
   m_ReverseArrangement: 0
 --- !u!95 &1207671287
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9939,7 +10117,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1209716993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,6 +10229,7 @@ RectTransform:
   - {fileID: 1602697167}
   - {fileID: 1643102564}
   - {fileID: 1066339947}
+  - {fileID: 281132239}
   - {fileID: 1820869175}
   - {fileID: 548654269}
   - {fileID: 100324825}
@@ -10704,7 +10883,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1302280430
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10721,7 +10900,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &1302280431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10772,7 +10951,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1309432249
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10789,7 +10968,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &1309432250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11404,7 +11583,7 @@ RectTransform:
   - {fileID: 2105681761}
   - {fileID: 978996593}
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12709,7 +12888,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 211}
-  m_SizeDelta: {x: 382.22223, y: 100}
+  m_SizeDelta: {x: 385.33334, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552765767
 MonoBehaviour:
@@ -12788,7 +12967,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -588.2001, y: 143.6001}
-  m_SizeDelta: {x: 85.333336, y: 65.3}
+  m_SizeDelta: {x: 86.666664, y: 65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564046292
 MonoBehaviour:
@@ -12962,7 +13141,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -586.3, y: 155.8}
-  m_SizeDelta: {x: 129.77777, y: 65.3}
+  m_SizeDelta: {x: 132, y: 65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573319248
 MonoBehaviour:
@@ -13356,7 +13535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000024318695, y: -1208.86}
+  m_AnchoredPosition: {x: -0.000024318695, y: -1129}
   m_SizeDelta: {x: 1096.3, y: 185.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1585681968
@@ -13403,6 +13582,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 769062255}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GetZebedeeWallet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 946979823}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -14338,7 +14529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CASH OUT
+  m_Text: REWARDS
 --- !u!222 &1665378329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14418,7 +14609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gamertag
+  m_Text: example@gmail.com
 --- !u!222 &1723316287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15050,7 +15241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 548.15, y: -210.8775}
+  m_AnchoredPosition: {x: 548.15, y: -215.20001}
   m_SizeDelta: {x: 1096.3, y: 131.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1790312121
@@ -15262,7 +15453,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -15724,7 +15915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.66
-  m_Text: Withdrawal to your ZBD account complete.
+  m_Text: Cash out complete.
 --- !u!222 &1876960893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15818,6 +16009,7 @@ GameObject:
   - component: {fileID: 1898989566}
   - component: {fileID: 1898989565}
   - component: {fileID: 1898989564}
+  - component: {fileID: 1898989567}
   m_Layer: 5
   m_Name: BitcoinCount_Text
   m_TagString: Untagged
@@ -15842,8 +16034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -586.3, y: 155.8}
-  m_SizeDelta: {x: 85.333336, y: 65.3}
+  m_AnchoredPosition: {x: -586.3, y: 95}
+  m_SizeDelta: {x: 86.666664, y: 65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898989564
 MonoBehaviour:
@@ -15901,6 +16093,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898989562}
   m_CullTransparentMesh: 1
+--- !u!114 &1898989567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898989562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1 &1903049820
 GameObject:
   m_ObjectHideFlags: 0
@@ -16828,8 +17034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -643.7}
-  m_SizeDelta: {x: 1141.5, y: 859.9}
+  m_AnchoredPosition: {x: 0, y: -580}
+  m_SizeDelta: {x: 1141.5, y: 553.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996877733
 MonoBehaviour:
@@ -16853,11 +17059,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 04fff45160f324147bf916c6277217dc, type: 3}
-    m_FontSize: 15
+    m_FontSize: 172
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 70
+    m_MaxSize: 199
     m_Alignment: 1
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -16865,9 +17071,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 2.5
   m_Text: "To claim your Bitcoin and use it to shop or convert to your local currency,
-    get ZEBEDEE and\n connect your Gamertag. \n\nBy the way, these are small pieces
-    of Bitcoin, not entire coins. You\u2019ll\n have to get rich somewhere else,
-    sorry."
+    you\u2019ll need the ZBD app.\r\n\r\nBut you can get started by just entering
+    your email!"
 --- !u!222 &1996877734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17152,7 +17357,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223759483}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -17966,7 +18171,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2124242562
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17983,7 +18188,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!222 &2124242563
 CanvasRenderer:
   m_ObjectHideFlags: 0
